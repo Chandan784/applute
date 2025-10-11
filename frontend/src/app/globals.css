@@ -86,3 +86,9 @@ body {
 .snap-center {
   scroll-snap-align: center;
 }
+
+.text-gradient-blue {
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
