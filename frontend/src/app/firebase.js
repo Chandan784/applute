@@ -6,6 +6,9 @@ import {
   signInWithPopup,
   signOut,
 } from "firebase/auth";
+{
+  sjhsh;
+}
 
 // Your Firebase project configuration
 const firebaseConfig = {
