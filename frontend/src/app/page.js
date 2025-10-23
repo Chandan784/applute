@@ -28,7 +28,7 @@ const Page = () => {
           name="description"
           content="Innovative solutions for app development, web development, digital marketing, and more."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/applutelogo.jpg" />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
           rel="stylesheet"
