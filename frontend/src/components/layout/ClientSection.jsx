@@ -26,7 +26,7 @@ const ClientsSection = () => {
       since: "2020",
       category: "Technology",
       rating: 5,
-      image: "/images/client1.jpg",
+      image: "https://media.licdn.com/dms/image/v2/D560BAQFejWCpST1hig/company-logo_200_200/company-logo_200_200/0/1712399112041/csspl_logo?e=1762992000&v=beta&t=cUhA2qp55bukmlk1v_fY9_9argbVGgwkUE3ewSdu5eM",
     },
     {
       name: "Divisha LandTreat",
@@ -36,7 +36,7 @@ const ClientsSection = () => {
       since: "2021",
       category: "Real Estate",
       rating: 4,
-      image: "/images/client2.jpg",
+      image: "https://landtreat.com/logos/landtreat_icon.svg",
     },
     {
       name: "Amilo AI",
@@ -46,7 +46,7 @@ const ClientsSection = () => {
       since: "2022",
       category: "AI/ML",
       rating: 5,
-      image: "/images/client3.jpg",
+      image: "https://media.licdn.com/dms/image/v2/D560BAQEoAUhGyToIZg/company-logo_200_200/B56ZcU_hNDHUAI-/0/1748403885766?e=2147483647&v=beta&t=X77ggbNmnl5s1Ijyi3Tww8AoqY6wW7xwq5dC6YklhEU",
     },
     {
       name: "Skillanto",
@@ -56,7 +56,7 @@ const ClientsSection = () => {
       since: "2021",
       category: "EdTech",
       rating: 5,
-      image: "/images/client4.jpg",
+      image: "https://content.jdmagicbox.com/comp/bhubaneshwar/u3/0674px674.x674.221105115124.w8u3/catalogue/skillanto-private-limited-chandrasekharpur-bhubaneshwar-computer-software-development-educational-institute-ofsqnofdme-250.jpg",
     },
     {
       name: "Genica",
@@ -66,7 +66,7 @@ const ClientsSection = () => {
       since: "2020",
       category: "Consulting",
       rating: 4,
-      image: "/images/client5.jpg",
+      image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAAAAABWESUoAAABCElEQVR4AZXQIW7FMAzG8RxjV3oXGB59BygtL3uosNJAUVFooXGkQDOrkoGlFASERCHeOhx3en/qH/ns9J/eAUfMpV6VIF0AC0u5kil0QR0oXfdEixoA21U9Qx9odXOkhDAmA6iHqCeOxZ7pXERhtUGqo4u3j4r7M8gNiFTEPWyQCCn7bTHB6pGbrh8W2KasrWDwn60Pih4snLW+tAua+74mJliH2AUqosIoTTH3wfiAo6nS/mWt2Md6EiFkC/inTycLFPuTzmvZqpqgzOEFojZQfTrSO+AJvDtssEPmMHGzwAaYfoVbDVBQ/6qR+yDOgc9EIQ5bH6xIzFmE0AALUKqt1gxzDxj9ACp0yEMh4CFmAAAAAElFTkSuQmCC",
     },
     {
       name: "Vernacular Medium",
@@ -75,7 +75,7 @@ const ClientsSection = () => {
       since: "2023",
       category: "EdTech",
       rating: 5,
-      image: "/images/client6.jpg",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhtucWM43f3NgTZNGGQ4BUrLuIPXUrU8WD2g&s",
     },
   ];
 
@@ -174,6 +174,12 @@ const ClientsSection = () => {
                 ))}
               </div>
             </div>
+             <button
+              onClick={() => goToSlide(currentIndex - 1)}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-100 hover:bg-blue-200 text-blue-600 rounded-full p-2 shadow-md"
+            >
+              <FiChevronLeft size={20} />
+            </button>
 
             <button
               onClick={() => goToSlide(currentIndex + 1)}
