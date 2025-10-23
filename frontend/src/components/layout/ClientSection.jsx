@@ -153,7 +153,7 @@ const ClientsSection = () => {
                     <h3 className="text-xl font-semibold text-center">
                       {client.name}
                     </h3>
-                    <p className="text-sm text-center text-gray-600 mb-2">
+                    <p className="text-sm text-center text-gray-700 mb-2">
                       {client.description}
                     </p>
                     <div className="flex justify-center gap-1 mb-2">
