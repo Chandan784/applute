@@ -20,7 +20,7 @@ const TechnologySection = () => {
     { name: "Swift", icon: "SiSwift", color: "#FA7343" },
     { name: "GraphQL", icon: "SiGraphql", color: "#E10098" },
     { name: "AWS", icon: "SiAmazonaws", color: "#FF9900" },
-    { name: "Git", icon: "SiGit", color: "#F14E32" },
+    { name: "Git", icon: "SiGit", color: "#f04527ff" },
   ];
 
   // Smooth infinite scroll
