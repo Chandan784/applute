@@ -1,9 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import {
+
+} from "react-icons/fa";
 
 const Contact = () => {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [form, setForm] = useState({ name: "", mobile: "", email: "", message: "" });
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -54,14 +57,14 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-3">
               <FiMapPin className="text-gradient-blue text-2xl" />
-              <span>Uttarahalli, Bangalore, India</span>
+              <span>Sundarpada, Bhubaneswar, Odisha, India</span>
             </div>
             <div className="flex space-x-6 mt-6">
               <a
                 href="https://facebook.com/applute"
                 className="hover:text-gradient-blue transition duration-300"
               >
-                Facebook
+                 Facebook
               </a>
               <a
                 href="https://twitter.com/applute"
@@ -80,7 +83,7 @@ const Contact = () => {
             {/* Optional Map */}
             <div className="mt-6 w-full h-64 border rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31102.89967590457!2d77.537!3d12.917!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17067d5d6f8f%3A0x8206d625e9c08d!2sUttarahalli%2C%20Bangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14974.86492854019!2d85.80327875158498!3d20.229109599638715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a19a7cb632fac89%3A0xc24cec184060a949!2sApplute%20Technologies%20Private%20Limited!5e0!3m2!1sen!2sin!4v1761377421995!5m2!1sen!2sin"
                 className="w-full h-full"
                 allowFullScreen=""
                 loading="lazy"
@@ -102,6 +105,20 @@ const Contact = () => {
                 type="text"
                 name="name"
                 value={form.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gradient-blue"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 font-semibold mb-2">
+                Mobile
+              </label>
+              <input
+                type="tel"
+                name="mobile"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                value={form.mobile}
                 onChange={handleChange}
                 required
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gradient-blue"

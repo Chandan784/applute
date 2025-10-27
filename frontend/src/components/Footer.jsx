@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className=" bg-gray-900 text-white py-12">
       <div className="container mx-auto px-6 md:flex md:justify-between md:items-start">
         {/* About Section */}
         <div className="mb-8 md:mb-0 md:w-1/3">
