@@ -7,6 +7,7 @@ import {
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", mobile: "", email: "", message: "" });
+  const whatsappNumber = "+916370302039";
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -14,9 +15,23 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const text = `Name: ${form.name}\nMobile: ${form.mobile}\nEmail: ${form.email}\nMessage: ${form.message}`;
+    const encodedText = encodeURIComponent(text);
+
+    let whatsappURL = "";
+
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      whatsappURL = `whatsapp://send?phone=${whatsappNumber}&text=${encodedText}`;
+    } else {
+      whatsappURL = `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedText}`;
+    }
+
+    window.open(whatsappURL, "_blank");
+
     // Here you can integrate email sending API or backend
     alert("Message sent successfully!");
-    setForm({ name: "", email: "", message: "" });
+    setForm({ name: "", mobile: "",email: "", message: "" });
   };
 
   return (
@@ -117,7 +132,7 @@ const Contact = () => {
               <input
                 type="tel"
                 name="mobile"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                pattern="[0-9]{10}"
                 value={form.mobile}
                 onChange={handleChange}
                 required
