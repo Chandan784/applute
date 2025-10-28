@@ -1,30 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
-const slides = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1624996752380-8ec242e0f85d?w=1600&auto=format&fit=crop&q=80",
-    title: "Empower Your Tech Skills",
-    subtitle: "Learn Fullstack, React, Node, and more!",
-    gradient: "from-blue-900/70 via-blue-800/40 to-purple-900/70",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1629904853893-c2c8981a1dc5?w=1600&auto=format&fit=crop&q=80",
-    title: "Master Modern Development",
-    subtitle: "Industry-relevant courses with hands-on projects",
-    gradient: "from-emerald-900/70 via-emerald-800/40 to-cyan-900/70",
-  },
-  {
-    image:
-      "https://media.istockphoto.com/id/2149124402/photo/web-developer-coding-on-computer.webp?w=1600&h=900&fit=crop",
-    title: "Build Your Future",
-    subtitle: "Transform your career with cutting-edge technology",
-    gradient: "from-violet-900/70 via-purple-800/40 to-pink-900/70",
-  },
-];
+import {slides} from "../app/offline_data/slider.js";
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
@@ -50,15 +27,15 @@ export default function Hero() {
   // 🎬 Define animations for each style
   const animations = {
     fade: {
-      initial: { opacity: 0 },
+      initial: { opacity: 1 },
       animate: { opacity: 1 },
-      exit: { opacity: 0 },
+      exit: { opacity: 1 },
       transition: { duration: 1 },
     },
     slide: {
-      initial: { opacity: 0, x: 200 },
+      initial: { opacity: 1, x: 200 },
       animate: { opacity: 1, x: 0 },
-      exit: { opacity: 0, x: -200 },
+      exit: { opacity: 1, x: -200 },
       transition: { duration: 1 },
     },
     zoom: {
@@ -103,7 +80,7 @@ export default function Hero() {
         <AnimatePresence mode="wait">
           <motion.div
             key={`content-${index}`}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 1, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
             transition={{ duration: 0.8 }}
@@ -122,7 +99,7 @@ export default function Hero() {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 bg-gradient-to-r from-white to-gray-100 text-gray-900 font-bold text-lg py-4 px-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <span>Explore Courses</span>
+              <span>Explore Services</span>
               <motion.svg
                 className="w-5 h-5"
                 fill="none"
