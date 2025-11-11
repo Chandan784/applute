@@ -10,7 +10,13 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
-        <title>Applute</title>
+        <title>Applute Technologies</title>
+
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3581420939899627"
+          crossorigin="anonymous"
+        ></script>
       </head>
       <body className="bg-white text-gray-900">
         <main className="pt-16">{children}</main>
