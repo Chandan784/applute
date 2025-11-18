@@ -54,7 +54,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center space-x-3">
               <FiMapPin className="text-gradient-blue text-2xl" />
-              <span>Uttarahalli, Bangalore, India</span>
+              <span>patia, Bhubaneswar, India</span>
             </div>
             <div className="flex space-x-6 mt-6">
               <a
